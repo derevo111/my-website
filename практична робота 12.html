@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практична робота №12 - Мультимедіа на веб-сторінках</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Стилі для графіки */
+        .sample-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid #ddd;
+            transition: 0.3s;
+        }
+
+        .sample-img:hover {
+            border-color: #3498db;
+        }
+
+        /* Стилі для анімації (Завдання 3) */
+        .animated-box {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            border-radius: 15px;
+            margin: 20px 0;
+            cursor: pointer;
+            /* Плавність переходу */
+            transition: all 0.5s ease-in-out; 
+        }
+
+        .animated-box:hover {
+            background-color: #e74c3c;
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Контейнер для адаптивного відео з YouTube */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Практична робота №12</h1>
+    <p><strong>Тема:</strong> Використання графічних, анімаційних та мультимедійних елементів.</p>
+
+    <div class="section">
+        <h2>1. Графічні елементи</h2>
+        <p>Зображення з використанням атрибутів <code>alt</code> та стилізацією через CSS:</p>
+        <img src="паска.png" alt="паска" class="sample-img"
+style="width: 300px;
+border-radius: 10px;">
+    </div>
+
+    <div class="section">
+        <h2>2. Мультимедіа (Audio & Video)</h2>
+        
+        <h3>Аудіоплеєр:</h3>
+        <audio controls>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+        <h3>Відеоплеєр:</h3>
+        <video controls width="100%">
+    <source src="video.mp4" type="video/mp4">
+</video>
+    </div>
+
+    <div class="section">
+        <h2>3. CSS-анімація</h2>
+        <p>Наведіть курсор на квадрат, щоб побачити ефект (transition + transform):</p>
+        <div class="animated-box">Hover Me!</div>
+    </div>
+
+    <div class="section">
+        <h2>4. Вбудовування відео з YouTube (Iframe)</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Xn7u0AUUJOg" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; font-size: 0.8em; color: #777;">
+        Виконав: [Процик Віолетта] | 2026
+    </footer>
+
+</body>
+</html>
